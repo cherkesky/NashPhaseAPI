@@ -9,4 +9,5 @@ phase = str(soup.find('h3'))
 phaseText = phase.split('in')
 phaseText2 = ''.join(phaseText[1])
 phaseText3 = phaseText2.split('of')
-print (phaseText3[0])
+finalPhaseText = phaseText3[0]
+print (finalPhaseText)
