@@ -1,7 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 
-source = requests.get('https://asafenashville.org/roadmap-for-reopening-nashville').text
+url ='https://asafenashville.org/roadmap-for-reopening-nashville'
+
+source = requests.get(url).text
 
 soup = BeautifulSoup(source, 'lxml')
 
