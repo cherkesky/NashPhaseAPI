@@ -1,1 +1,5 @@
 env
+python
+python.zip
+.DS_Store
+__pycache__
