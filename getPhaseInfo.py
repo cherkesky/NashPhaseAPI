@@ -24,6 +24,24 @@ phase2Table = soup.find('h2', id="phasetwo").next_sibling.next_sibling
 phase3Table = soup.find('h2', id="phasethree").next_sibling.next_sibling
 phase4Table = soup.find('h2', id="phasefour").next_sibling.next_sibling
 
+def getPhase1Info():
+  phaseInfoList = []
+  for h4 in phase1Table.findAll('tr'):
+    phaseTempDictionary = {}
+    phaseTempDictionaryKey = ""
+    phaseTempLi =""
+    phaseTempDictionaryValue=[]
+    currentH4 = h4.find_next('h4')
+    phaseTempDictionaryKey = currentH4.text
+    phaseTempLi = currentH4.find_next('ul')
+    
+    for li in phaseTempLi.findAll('li'):
+      noCommasLi = str(li.text).replace(',', '')
+      noXa0Li = noCommasLi.replace('\xa0', ".")
+      phaseTempDictionaryValue.append(noXa0Li)
+    phaseTempDictionary[phaseTempDictionaryKey]=phaseTempDictionaryValue
+    phaseInfoList.append(phaseTempDictionary)
+  return (phaseInfoList)
 
 def getPhase2Info():
   phaseInfoList = []
@@ -33,7 +51,45 @@ def getPhase2Info():
     phaseTempLi =""
     phaseTempDictionaryValue=[]
     currentH4 = h4.find_next('h4')
-    phaseTempDictionaryKey = currentH4.text.replace("\'", '\"')
+    phaseTempDictionaryKey = currentH4.text
+    phaseTempLi = currentH4.find_next('ul')
+    
+    for li in phaseTempLi.findAll('li'):
+      noCommasLi = str(li.text).replace(',', '')
+      noXa0Li = noCommasLi.replace('\xa0', ".")
+      phaseTempDictionaryValue.append(noXa0Li)
+    phaseTempDictionary[phaseTempDictionaryKey]=phaseTempDictionaryValue
+    phaseInfoList.append(phaseTempDictionary)
+  return (phaseInfoList)
+
+def getPhase3Info():
+  phaseInfoList = []
+  for h4 in phase3Table.findAll('tr'):
+    phaseTempDictionary = {}
+    phaseTempDictionaryKey = ""
+    phaseTempLi =""
+    phaseTempDictionaryValue=[]
+    currentH4 = h4.find_next('h4')
+    phaseTempDictionaryKey = currentH4.text
+    phaseTempLi = currentH4.find_next('ul')
+    
+    for li in phaseTempLi.findAll('li'):
+      noCommasLi = str(li.text).replace(',', '')
+      noXa0Li = noCommasLi.replace('\xa0', ".")
+      phaseTempDictionaryValue.append(noXa0Li)
+    phaseTempDictionary[phaseTempDictionaryKey]=phaseTempDictionaryValue
+    phaseInfoList.append(phaseTempDictionary)
+  return (phaseInfoList)
+
+def getPhase4Info():
+  phaseInfoList = []
+  for h4 in phase4Table.findAll('tr'):
+    phaseTempDictionary = {}
+    phaseTempDictionaryKey = ""
+    phaseTempLi =""
+    phaseTempDictionaryValue=[]
+    currentH4 = h4.find_next('h4')
+    phaseTempDictionaryKey = currentH4.text
     phaseTempLi = currentH4.find_next('ul')
     
     for li in phaseTempLi.findAll('li'):
