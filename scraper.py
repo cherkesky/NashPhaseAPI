@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import requests, datetime
+import requests, datetime, getPhaseInfo
 
 def goScrapePhase ():
   try:
@@ -51,17 +51,18 @@ def goScrapePhase ():
         returnObject = {
         'timestamp': str(TimeNow),
         'phase': finalPhaseText,
-        'all_residents': ['Age 65+ and High-risk stay at home', 'All work from home if possible','All residents wear masks in public', 'Schools closed', 'Small gatherings up to 25'],
-        'restaurants_and_bars_serving_food': ['Open at 1/2 capacity', 'Clean all surfaces after every use', 'Employees screened daily and required to wear face masks', 'Bar areas remain closed', 'Live entertainment allowed with proper social distancing –  dance floors remain closed'],
-        'socially_driven_businesses': ['Closed','This includes: Bars, clubs, karaoke bars, tours,  transportainment, live entertainment'],
-        'bars_and_entertainment_venues':['Closed'],
-        'retail_stores_and_commercial_businesses': ['Open at 1/2 capacity', 'Customers in waiting areas count towards capacity totals', 'Employees screened daily and wear masks' ],
-        'personal_care_services_nail_salons_hair_salons_massage_tattoo_tanning_etc': ['Open at 1/2 capacity','Customers in waiting areas count towards capacity totals','Employees screened daily and wear masks'],
-        'healthcare_and_dental': ['Follow State of Tennessee Guidance'],
-        'gyms_fitness_and_recreation': ['Metro Parks may reopen community centers, golf course clubhouses, museums, Sportsplex and nature centers at 50% capacity.', 'Tennis courts are now open with social distancing.', 'Dog parks, basketball courts, playgrounds, sports and recreations leagues, skate parks and splash pads shall remain closed.' ],
-        'museums_and_attractions': ['Open at 1/2 capacity', 'Employees screened daily and required to wear face masks', 'Interactive exhibits closed', 'Arcades closed', 'Tours closed'],
-        'day_camps': ['Buses run at 1/2 capacity', 'Employees screened daily and required to wear face masks', 'Cafeterias closed; packed or box lunches only', 'No overnight camps' ],
-        'large_sports_and_entertainment_venues':['Closed']
+        'restrictions': getPhaseInfo.getPhase2Info()
+        # 'all_residents': ['Age 65+ and High-risk stay at home', 'All work from home if possible','All residents wear masks in public', 'Schools closed', 'Small gatherings up to 25'],
+        # 'restaurants_and_bars_serving_food': ['Open at 1/2 capacity', 'Clean all surfaces after every use', 'Employees screened daily and required to wear face masks', 'Bar areas remain closed', 'Live entertainment allowed with proper social distancing –  dance floors remain closed'],
+        # 'socially_driven_businesses': ['Closed','This includes: Bars, clubs, karaoke bars, tours,  transportainment, live entertainment'],
+        # 'bars_and_entertainment_venues':['Closed'],
+        # 'retail_stores_and_commercial_businesses': ['Open at 1/2 capacity', 'Customers in waiting areas count towards capacity totals', 'Employees screened daily and wear masks' ],
+        # 'personal_care_services_nail_salons_hair_salons_massage_tattoo_tanning_etc': ['Open at 1/2 capacity','Customers in waiting areas count towards capacity totals','Employees screened daily and wear masks'],
+        # 'healthcare_and_dental': ['Follow State of Tennessee Guidance'],
+        # 'gyms_fitness_and_recreation': ['Metro Parks may reopen community centers, golf course clubhouses, museums, Sportsplex and nature centers at 50% capacity.', 'Tennis courts are now open with social distancing.', 'Dog parks, basketball courts, playgrounds, sports and recreations leagues, skate parks and splash pads shall remain closed.' ],
+        # 'museums_and_attractions': ['Open at 1/2 capacity', 'Employees screened daily and required to wear face masks', 'Interactive exhibits closed', 'Arcades closed', 'Tours closed'],
+        # 'day_camps': ['Buses run at 1/2 capacity', 'Employees screened daily and required to wear face masks', 'Cafeterias closed; packed or box lunches only', 'No overnight camps' ],
+        # 'large_sports_and_entertainment_venues':['Closed']
       }
     elif finalPhaseText == 'Phase Three':
             returnObject = {
