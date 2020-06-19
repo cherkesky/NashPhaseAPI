@@ -6,7 +6,7 @@ NashPhase API is a simple endpoint that returns back a a freshly scraped (once a
 
 I built this API after I noticed that there is no easy way to get this information programmatically and also I looked for an excuse to teach myself some AWS technologies. 
 
-<img src="https://github.com/cherkesky/NashPhaseAPI/blob/master/scraper.gif" height="200" width="400">
+<img src="https://github.com/cherkesky/NashPhaseAPI/blob/master/scraper.gif" height="400" width="600">
 
 ## Details
 
