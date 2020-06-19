@@ -23,7 +23,7 @@ I built this API after I noticed that there is no easy way to get this informati
 #### Lambda Function Implementation: 
 <img src="https://github.com/cherkesky/NashPhaseAPI/blob/master/lambdafn.png" height="200" width="600">
 
-Code:
+ScraperFn Code:
 https://gist.github.com/cherkesky/ef777c468233fa30757037ebf56c8b8e
 
 ### How to consume the API:
