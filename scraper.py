@@ -6,7 +6,9 @@ import getPhaseInfo
 
 def goScrapePhase():
     try:
-        url = 'https://asafenashville.org/roadmap-for-reopening-nashville'
+        # url = 'https://asafenashville.org/roadmap-for-reopening-nashville'
+        url='https://web.archive.org/web/20200616051954/https://www.asafenashville.org/roadmap-for-reopening-nashville/'
+
         headers = {
             'authority': 'scrapeme.live',
             'dnt': '1',
