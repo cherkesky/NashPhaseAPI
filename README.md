@@ -12,7 +12,7 @@ I built this API after I noticed that there is no easy way to get this informati
 
 
 #### Technology Stack: 
-- Python: Beautifulsoup4
+- Python: BeautifulSoup4
 - AWS Roles: Custom IAM Roles (JSON)
 - Certificate: Amazon Certificate Manager, DNS Verified
 - Lambda: Lambda Function, EventBridge, Python 3.8 Layer
@@ -20,6 +20,8 @@ I built this API after I noticed that there is no easy way to get this informati
 - API: Amazon API Gateway, Custom Domain Names, API Mapping
 - Version Control: Git, GitHub
 
+#### Lambda Function Implementation: 
+https://gist.github.com/cherkesky/ef777c468233fa30757037ebf56c8b8e
 
 ### How to consume the API:
 Simply hit the endpoint:
