@@ -1,4 +1,4 @@
-![NashPhase API](https://raw.githubusercontent.com/cherkesky/NashPhaseAPI/master/src/assets/nashphase_logo.png)
+![NashPhase API](https://github.com/cherkesky/NashPhaseAPI/blob/master/nashphase_logo.png)
 
 ### by Guy Cherkesky | [LinkedIn](http://linkedin.com/in/cherkesky) | [Website](http://cherkesky.com)
 
