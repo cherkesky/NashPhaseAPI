@@ -2,7 +2,7 @@
 
 ### by Guy Cherkesky | [LinkedIn](http://linkedin.com/in/cherkesky) | [Website](http://cherkesky.com)
 
-NashPhase API is a simple endpoint that returns back a freshly scraped (once an hour) JSON with Nashville's current reopening phase including the breakdown of all the current restrictions. 
+** DEPRECATED ** NashPhase API is a simple endpoint that returns back a freshly scraped (once an hour) JSON with Nashville's current reopening phase including the breakdown of all the current restrictions. 
 
 I built this API after I noticed that there is no easy way to get this information programmatically, and also I looked for an excuse to teach myself some AWS technologies. 
 
